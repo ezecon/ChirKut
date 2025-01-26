@@ -105,7 +105,7 @@ export default function Messages() {
   //copy potion objects
   const [copied, setCopied] = useState(false);
 
-  const textToCopy = userInfo ? `https://chirkut-seven.vercel.app/user/${userInfo.name}` : "This is the text you can copy by clicking the button.";
+  const textToCopy = userInfo ? `https://chirkut-pathao.vercel.app/user/${userInfo.name}` : "This is the text you can copy by clicking the button.";
 
 
   const handleCopy = () => {
