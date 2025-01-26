@@ -24,7 +24,7 @@ export default function Messages() {
     const fetchMessages = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:3000/api/v2/messages/`);
+        const response = await axios.get(`https://chirkut-server.vercel.app/api/v2/messages/`);
         if (response.status === 200) {
           setMessages(response.data.data);
         } else {

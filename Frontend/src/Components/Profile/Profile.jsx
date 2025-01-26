@@ -24,7 +24,7 @@ export default function Profile() {
     }
     const verifyToken = async () => {
       try {
-        const response = await axios.post('http://localhost:3000/api/v2/auth-user-info', { token });
+        const response = await axios.post('https://chirkut-server.vercel.app/api/v2/auth-user-info', { token });
         if (response.status === 200 && response.data.valid) {
           setUserID(response.data.decoded.id);
           console.log(userID)
@@ -68,7 +68,7 @@ export default function Profile() {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:3000api/v2/users/${userID}`, userInfo);
+      const response = await axios.put(`https://chirkut-server.vercel.app/api/v2/users/${userID}`, userInfo);
       if (response.status === 200) {
         toast.success("Profile updated successfully");
         setIsEditing(false);

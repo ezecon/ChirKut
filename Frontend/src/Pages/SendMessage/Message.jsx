@@ -27,7 +27,7 @@ const Message = () => {
     // Prepare data
     const data = { sender, message, receiver:name };
     try {
-      const response = await axios.post(`http://localhost:3000/api/v2/messages/`, data);
+      const response = await axios.post(`https://chirkut-server.vercel.app/api/v2/messages/`, data);
       if (response.data) {
         console.log(response.data);
         alert("Message sent successfully!");

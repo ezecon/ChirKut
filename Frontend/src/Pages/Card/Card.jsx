@@ -14,7 +14,7 @@ const {id} = useParams();
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v2/messages/${id}`); // Replace with your API endpoint
+        const response = await axios.get(`https://chirkut-server.vercel.app/api/v2/messages/${id}`); // Replace with your API endpoint
         if (response.data) {
           setData(response.data.data);
         }
