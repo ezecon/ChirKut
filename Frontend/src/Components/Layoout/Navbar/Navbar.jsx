@@ -72,7 +72,7 @@ export default function Navbar() {
         {userID ? (
           <Menu>
             <MenuHandler>
-              <Avatar src="https://cdn-icons-png.flaticon.com/512/3607/3607444.png" className="border-green-600 border-2 cursor-pointer" size="md" />
+              <Avatar src="https://cdn-icons-png.flaticon.com/512/3607/3607444.png" className="border-[goldenrod] border-2 cursor-pointer" size="md" />
             </MenuHandler>
             <MenuList>
               <Link to="/profile"><MenuItem>Profile</MenuItem></Link>
