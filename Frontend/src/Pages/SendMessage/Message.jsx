@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
+import toast from "react-hot-toast";
 
 const Message = () => {
   const [sender, setSender] = useState("");
@@ -12,15 +13,15 @@ const Message = () => {
     event.preventDefault();
 
     // Validate inputs
-    if (!sender || !message) {
-      alert("Please fill in both fields");
+    if (!message) {
+      toast.error("Please fill in message fields");
       return;
     }
 
     // Count words in the message
     const wordCount = message.trim().split(/\s+/).length;
     if (wordCount > 150) {
-      alert("Message exceeds 150-word limit");
+      toast.error("Message exceeds 150-word limit");
       return;
     }
 
@@ -30,7 +31,7 @@ const Message = () => {
       const response = await axios.post(`https://chirkut-server.vercel.app/api/v2/messages/`, data);
       if (response.data) {
         console.log(response.data);
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setSender("");
         setMessage("");
       }

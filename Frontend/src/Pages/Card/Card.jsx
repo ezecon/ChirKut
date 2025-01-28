@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { toPng } from "html-to-image";
 import download from "downloadjs";
 import { IoDownloadOutline } from "react-icons/io5";
-import { SiTinyletter } from "react-icons/si";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
